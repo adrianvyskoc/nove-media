@@ -6,53 +6,49 @@
       </div>
     </transition-group>
     <a class="prev" @click="prev" href="#">Previous</a>
-    <a class="next" @click="next" href="#"> Next</a>
+    <a class="next" @click="next" href="#">Next</a>
+    <a class="middle" >{{currentIndex + 1}}</a>
   </div>
 </template>
 
 <script>
+
 export default {
-  name: "Slider",
   data() {
     return {
       images: [
-        "https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg",
-        "https://cdn.pixabay.com/photo/2016/02/17/23/03/usa-1206240_1280.jpg",
-        "https://cdn.pixabay.com/photo/2015/05/15/14/27/eiffel-tower-768501_1280.jpg",
-        "https://cdn.pixabay.com/photo/2016/12/04/19/30/berlin-cathedral-1882397_1280.jpg"
-        /*
-        "../assets/tutorial1.png",
-        "../assets/tutorial2.png",
-        "../assets/tutorial3.png",
-        "../assets/tutorial4.png",
-        "../assets/tutorial5.png"
-        */
+        "pics/tutorial1.png",
+        "pics/tutorial2.png",
+        "pics/tutorial3.png",
+        "pics/tutorial4.png",
+        "pics/tutorial5.png"
       ],
       timer: null,
       currentIndex: 0
     };
   },
 
-  mounted: function() {
-    //this.startSlide();
-  },
-
   methods: {
-   /* startSlide: function() {
-      this.timer = setInterval(this.next, 4000);
-    },*/
 
-    next: function() {
-      this.currentIndex += 1;
+
+   async next() {
+     this.$router.push({ name: 'Tutorial'});
+      if (this.currentIndex >= 4) {
+        await this.$router.push({ name: 'Question', params: { id: 0} })
+        this.currentIndex = 0;
+      } else this.currentIndex += 1;
+
+      
     },
-    prev: function() {
+
+    prev() {
       this.currentIndex -= 1;
     }
   },
 
   computed: {
-    currentImg: function() {
-      return this.images[Math.abs(this.currentIndex) % this.images.length];
+    currentImg() {
+      return this.images[this.currentIndex];
     }
   }
 };
@@ -67,16 +63,31 @@ export default {
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 40%;
+  top: 80%;
   width: auto;
   padding: 16px;
-  color: white;
+  color: black;
   font-weight: bold;
   font-size: 18px;
   transition: 0.7s ease;
   border-radius: 0 4px 4px 0;
   text-decoration: none;
   user-select: none;
+}
+
+.middle {
+  position: absolute;
+  top: 80%;
+  width: auto;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.7s ease;
+  border-radius: 0 4px 4px 0;
+  text-decoration: none;
+  user-select: none;
+  right: 50%;
 }
 
 .next {
