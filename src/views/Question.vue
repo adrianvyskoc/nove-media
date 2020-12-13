@@ -98,6 +98,7 @@ export default {
 
     async _loadQuestion() {
       this.question = (await axios.get(`mocks/data.json`)).data[this.id - 1]
+      console.log(this.question)
       const html = (await axios.get('https://cors-anywhere.herokuapp.com/' + this.question.url)).data
       this.html = 'data:text/html;charset=utf-8,' + html
     }

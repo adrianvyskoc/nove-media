@@ -5,9 +5,10 @@
         <img :src="currentImg" />
       </div>
     </transition-group>
-    <a class="prev" @click="prev" href="#">Previous</a>
-    <a class="next" @click="next" href="#">Next</a>
-    <a class="middle" >{{currentIndex + 1}}</a>
+    <a v-if="currentIndex !== 0" class="prev" @click="prev" href="#">Previous</a>
+    <a v-if="currentIndex !== 4" class="next" @click="next" href="#">Next</a>
+    <router-link v-if="currentIndex === 4" class="quiz" to="/question/1">Quiz</router-link>
+    <a  class="middle" >{{currentIndex + 1}}</a>
   </div>
 </template>
 
@@ -31,18 +32,16 @@ export default {
   methods: {
 
 
-   async next() {
-     this.$router.push({ name: 'Tutorial'});
-      if (this.currentIndex >= 4) {
-        await this.$router.push({ name: 'Question', params: { id: 0} })
-        this.currentIndex = 0;
-      } else this.currentIndex += 1;
-
-      
+    next() {
+      this.currentIndex += 1;
     },
 
     prev() {
       this.currentIndex -= 1;
+    },
+
+    async quiz() {
+      this.$router.push({ name: 'Question', params: { id: 0} })
     }
   },
 
@@ -60,7 +59,7 @@ export default {
   width:100%
 }
 
-.prev, .next {
+.prev, .next, .quiz {
   cursor: pointer;
   position: absolute;
   top: 80%;
@@ -75,7 +74,7 @@ export default {
   user-select: none;
 }
 
-.middle {
+.middle{
   position: absolute;
   top: 80%;
   width: auto;
@@ -87,7 +86,7 @@ export default {
   border-radius: 0 4px 4px 0;
   text-decoration: none;
   user-select: none;
-  right: 50%;
+  left: 50%;
 }
 
 .next {
@@ -96,6 +95,14 @@ export default {
 
 .prev {
   left: 0;
+}
+
+.quiz {
+  right: 0;
+}
+
+.quiz:hover {
+  background-color: black;
 }
 
 .prev:hover, .next:hover {
