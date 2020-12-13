@@ -1,0 +1,107 @@
+[
+  {
+     "url":"https://www.axios.com/climate-change-may-cause-food-insecurity-crop-pests-f712725a-a2a0-4a44-b14a-5a5a3b97658f.html",
+     "trustworthy":true,
+     "reason":[
+        "vidíme jasne meno autora",
+        "autor sa odkazuje na odborné články",
+        "autor takisto ozdrojoval aj uvedený graf"
+     ]
+  },
+  {
+     "url":"https://www.cdc.gov/tobacco/data_statistics/fact_sheets/health_effects/effects_cig_smoking/",
+     "trustworthy":true,
+     "reason":[
+        "uvádza odborné zdroje",
+        "citovanie zdrojov je správne uvedené",
+        "uvedené smerovanie v prípade bližšieho záujmu (kontakt)"
+     ]
+  },
+  {
+     "url":"http://www.civilwar.si.edu/home.html",
+     "trustworthy":true,
+     "reason":[
+        "aj napriek dizajnu stránky (ktorý vyzerá podozrivo), je možné dohľadať informácie o inštitúcii, ktorá informácie poskytuje",
+        "e možné vidieť aj zoznam literatúry (síce nie pod informáciami, ale v samostatnej sekcii)"
+     ]
+  },
+  {
+     "url":"https://zapatopi.net/treeoctopus/",
+     "trustworthy":false,
+     "reason":[
+        "uvedené zdroje sú iba od jedného autora",
+        "obrázky sú opísané, no nemajú zdroje (aj keď poskytujú informácie)",
+        "literatúra na stránke ponúka neodborné či nevhodné zdroje",
+        "pôsobí dôveryhodne, lebo ponúka množstvo meteriálu na overenie (lenže overením zistíme klamlivý podklad)"
+     ]
+  },
+  {
+     "url":"https://zapatopi.net/afdb/",
+     "trustworthy":false,
+     "reason":[
+        "uvedené zdroje sú iba od jedného autora",
+        "obrázky sú opísané, no nemajú zdroje (aj keď poskytujú informácie)",
+        "literatúra na stránke ponúka neodborné či nevhodné zdroje",
+        "pôsobí dôveryhodne, lebo ponúka množstvo meteriálu na overenie (lenže overením zistíme klamlivý podklad)"
+     ]
+  },
+  {
+     "url":"http://descy.50megs.com/akcj3/bmd.html",
+     "trustworthy":false,
+     "reason":[
+        "veľmi nevhodný a zavádzajúci dizajn",
+        "strohý text",
+        "bez zdrojov",
+        "na spodnej strane stránky sú uvedené odkazy na informácie, ktoré nepodkladajú informácie uvedené v texte"
+     ]
+  },
+  {
+     "url":"https://www.allaboutexplorers.com/about/?fbclid=IwAR12BE4rW78bnSb8-z-ddmSLkoBRL1fCOodhyPdxBzPHiocO4mwDeA0zp3w",
+     "trustworthy":false,
+     "reason":[
+        "uvádza informácie, ktoré zdrojuje odkazmi na vlastné články",
+        "odkazy na iné články sú väčšinou pokazené odkazy (ang. broken links)",
+        "niektoré odkazy na zdroje sú samotné nedôveryhodné články (bez autora, bez zdrojov, nejasný pôvod a kvalita informácií)"
+     ]
+  },
+  {
+     "url":"http://www.thedogisland.com/index.html",
+     "trustworthy":false,
+     "reason":[
+        "bez zdrojov",
+        "všetko je viazané iba na danú webstránku (napr. odkazy na iné články)",
+        "miestami veľmi málo textu",
+        "podozrivý dizajn",
+        "bez autora"
+     ]
+  },
+  {
+     "url":"http://www.molossia.org/index.html",
+     "trustworthy":false,
+     "reason":[
+        "zdroje sú z tej istej stránky",
+        "informácie nie sú overiteľné",
+        "bez autora",
+        "klamlivé označovanie “republika” (nejedná sa o republiku)"
+     ]
+  },
+  {
+     "url":"https://deathpenalty.org/facts/death-penalty-is-broken-beyond-repair-costly-failure/",
+     "trustworthy":false,
+     "reason":[
+        "neštruktúrovaný text (chýba rozumný úvod, záver)",
+        "uvedené údaje nie sú zdrojované a sú cielené (názor nie je transparentný)",
+        "niektoré zdroje sú uvedené iba textom (“Štúdie autora A z roku 2011 …”)",
+        "dokonca aj gramatické chyby"
+     ]
+  },
+  {
+     "url":"http://www.1kfriends.org/wisconsins-local-road-crisis/",
+     "trustworthy":false,
+     "reason":[
+        "odvolávanie sa na nepodložené štatistiky",
+        "odkazy na články, ktoré takisto nemajú podložené štatistiky a nepoužívajú zdroje",
+        "odkaz na extra čítanie, ktoré je z tej istej stránky (a teda odkaz na “vlastné zdroje”)"
+     ]
+  }
+]
