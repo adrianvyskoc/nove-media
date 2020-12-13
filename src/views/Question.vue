@@ -47,12 +47,12 @@
       </template>
 
       <button 
-        v-if="canGoNext && answerSelected"
+        v-if="canGoNext"
         class="btn btn-primary btn-lg flex-grow-1 float-end" 
         :disabled="!answerSelected"
         @click="onNext"
       >Prejsť na ďalšiu stránku</button>
-      <div class="fw-bold fs-2 mt-5" v-else>Ďakujeme, toto je posledná ukážka.</div>
+      <div v-if="!canGoNext" class="fw-bold fs-2 mt-5">Ďakujeme, toto je posledná ukážka.</div>
     </div>
   </div>
   
