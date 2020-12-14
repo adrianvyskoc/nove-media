@@ -10,6 +10,8 @@
       </div>
 
       <div class="fw-bold fs-1">{{ this.id }}. ukážka</div>
+	  <a target="_blank" :href="this.question?.url">{{this.question?.url}}</a>
+
       <div class="fw-bold fs-2">Považujete túto stránku za dôveryhodnú?</div>
 
       <div class="mb-5 fs-5 text-muted">
