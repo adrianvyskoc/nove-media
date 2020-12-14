@@ -5,9 +5,9 @@
         <img :src="currentImg" />
       </div>
     </transition-group>
-    <a v-if="currentIndex !== 0" class="prev" @click="prev" href="#">Previous</a>
-    <a v-if="currentIndex !== 4" class="next" @click="next" href="#">Next</a>
-    <router-link v-if="currentIndex === 4" class="quiz" to="/question/1">Quiz</router-link>
+    <a v-if="currentIndex !== 0" class="prev" @click="prev" href="#">Predošlí</a>
+    <a v-if="currentIndex !== 4" class="next" @click="next" href="#">Ďaľší</a>
+    <router-link v-if="currentIndex === 4" class="quiz" to="/question/1">Kvíz</router-link>
     <a  class="middle" >{{currentIndex + 1}}</a>
   </div>
 </template>

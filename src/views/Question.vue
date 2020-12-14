@@ -52,7 +52,9 @@
         :disabled="!answerSelected"
         @click="onNext"
       >Prejsť na ďalšiu stránku</button>
-      <div v-if="!canGoNext" class="fw-bold fs-2 mt-5">Ďakujeme, toto je posledná ukážka.</div>
+      <div v-if="!canGoNext" class="fw-bold fs-2 mt-5">
+         <router-link class="btn btn-primary btn-lg flex-grow-1 float-end" to="/evaluation">Vyhodnoťenie</router-link>
+        Ďakujeme, toto je posledná ukážka.</div>
     </div>
   </div>
   
