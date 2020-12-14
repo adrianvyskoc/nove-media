@@ -66,7 +66,8 @@ import axios from 'axios'
 export default {
   
   async mounted() {
-    this._loadQuestion()
+    this._loadQuestion();
+    this.$store.commit('correctAnswersToZero');
   },
 
   data() {

@@ -9,6 +9,10 @@ export default createStore({
   mutations: {
     incrementCorrectAnswers(state) {
       state.correctAnswers++
+    },
+
+    correctAnswersToZero(state) {
+      state.correctAnswers = 0;
     }
   }
 })
