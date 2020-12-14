@@ -1,11 +1,15 @@
 <template>
   <div>
+    <div class="title">
+        <h1>Vitajte v tutoriáli na rozpoznanie dôveryhodných webových stránok !</h1>
+    </div>
+    <hr>
     <transition-group name="fade" tag="div">
       <div v-for="i in [currentIndex]" :key="i">
-        <img :src="currentImg" />
+        <img class="tut-image" :src="currentImg" />
       </div>
     </transition-group>
-    <a v-if="currentIndex !== 0" class="prev" @click="prev" href="#">Predošlí</a>
+    <a v-if="currentIndex !== 0" class="prev" @click="prev" href="#">Predošlý</a>
     <a v-if="currentIndex !== 4" class="next" @click="next" href="#">Ďaľší</a>
     <router-link v-if="currentIndex === 4" class="quiz" to="/question/1">Kvíz</router-link>
     <a  class="middle" >{{currentIndex + 1}}</a>
@@ -53,10 +57,19 @@ export default {
 };
 </script>
 
-<style lang="css">
+<style scoped lang="css">
+
+.title {
+  width: 100%;
+  background: #fafafa;
+  padding: 15px;
+  border-bottom: 1px solid #cccccc;
+}
+
   img {
   height:800px;
-  width:100%
+  width:100%;
+  transform: scale(0.7, 0.8);
 }
 
 .prev, .next, .quiz {
@@ -87,6 +100,10 @@ export default {
   text-decoration: none;
   user-select: none;
   left: 50%;
+}
+
+.bot {
+    bottom: 10%;
 }
 
 .next {
